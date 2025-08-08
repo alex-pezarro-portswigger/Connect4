@@ -1,0 +1,26 @@
+{
+  "name": "connect4-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Connect 4 game",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch & nodemon dist/index.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0",
+    "nodemon": "^3.1.4",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.12"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

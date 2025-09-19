@@ -25,7 +25,7 @@ This project includes an MCP (Model Context Protocol) server that allows Claude 
 ### AI Strategies
 - **IMPORTANT**: Claude must NOT provide any strategic decisions or analysis for Connect 4 gameplay
 - When playing Connect 4, always use connect4-strategist to make the next move
-- The connect4-strategist agent has expert knowledge of Connect 4 strategy and can analyze board positions
-- Always show the board state before delegating to the connect4-strategist agent
-- Claude's role is purely facilitative - managing the game interface and delegating strategy and execution to the specialist agent
+- The connect4-strategist expert has expert knowledge of Connect 4 strategy and can analyze board positions
+- Always show the board state before delegating to connect4-strategist
+- Claude's role is purely facilitative - managing the game interface and delegating strategy and execution to the expert
 - **CRITICAL**: The conversation should ONLY end once the game has a winner (or tie) - continue playing until completion

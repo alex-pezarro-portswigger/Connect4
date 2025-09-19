@@ -1,0 +1,7 @@
+# Interactive Gameplay Workflow
+1. **Start a new game**: Use `mcp__connect4__reset_game` to initialize a fresh game
+2. **Show the board**: Use `mcp__connect4__get_board_visual` to display the current state
+3. **Check turn**: Use `mcp__connect4__get_current_player` to see whose turn it is
+4. **Make moves**: Use `mcp__connect4__place_piece` with column number (1-7)
+5. **Check for winner**: Use `mcp__connect4__check_winner` after each move
+6. **Game status**: Use `mcp__connect4__get_game_status` for comprehensive information

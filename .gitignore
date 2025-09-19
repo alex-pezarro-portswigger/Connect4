@@ -112,6 +112,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Node.js dependencies
+./connect4-mcp/node_modules/
+
 # IDE files
 .vscode/
 .idea/

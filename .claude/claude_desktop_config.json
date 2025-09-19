@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "connect4": {
+      "command": "npm",
+      "args": ["start"],
+      "cwd": "./connect4-mcp"
+    }
+  }
+}

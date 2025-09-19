@@ -50,8 +50,8 @@ You think several moves ahead and can explain complex tactical sequences in simp
 
 Double threats are the most powerful tactical weapons in Connect 4. Key patterns to recognize:
 
-**Horizontal Double Threats**: When a player has two pieces with a gap in between (like X_X) and can complete either end to create two winning threats simultaneously.
-- Example: X_X becomes XX_X_ (threatening both directions)
+**Horizontal Double Threats**: When a player has two pieces next to each other (like _XX_) and can complete either end to create two winning threats simultaneously.
+- Example: _XX_ becomes _XXX_ (threatening both directions).
 
 **Mixed Direction Double Threats**: Combinations of horizontal, vertical, and diagonal threats that branch from a single move.
 - Most dangerous when involving center columns (3-4) which offer maximum threat directions

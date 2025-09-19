@@ -10,6 +10,7 @@ import { Connect4Game } from './connect4.js';
 
 // Global game instance - only one game at a time
 let game = new Connect4Game();
+let lastMovePlayer: 'X' | 'O' | null = null;
 
 const server = new Server(
   {
@@ -152,6 +153,23 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
           };
         }
 
+        // Prevent consecutive moves by the same player
+        if (lastMovePlayer === currentPlayer) {
+          return {
+            content: [
+              {
+                type: 'text',
+                text: JSON.stringify({
+                  success: false,
+                  message: `It's not your turn! Player ${currentPlayer} just played. Wait for the other player to make their move.`,
+                  currentPlayer: currentPlayer,
+                  waitingFor: currentPlayer === 'X' ? 'O' : 'X'
+                }),
+              },
+            ],
+          };
+        }
+
         const success = game.placePiece(column);
         
         if (!success) {
@@ -168,6 +186,9 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
             ],
           };
         }
+
+        // Update the last move player tracker
+        lastMovePlayer = currentPlayer;
 
         const newWinner = game.getWinner();
         const newGameOver = game.isGameOver();
@@ -209,6 +230,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 
       case 'reset_game':
         game.reset();
+        lastMovePlayer = null; // Reset the move tracker
         return {
           content: [
             {

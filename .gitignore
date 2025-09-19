@@ -113,7 +113,7 @@ dmypy.json
 .pyre/
 
 # Node.js dependencies
-./connect4-mcp/node_modules/
+node_modules/
 
 # IDE files
 .vscode/

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "connect4": {
+      "command": "node",
+      "args": ["/Users/alex.pezarro/Projects/claude-dev/Connect4/connect4-mcp/dist/index.js"]
+    }
+  }
+}
